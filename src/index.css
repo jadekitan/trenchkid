@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --dark: rgba(14, 15, 29, 1);
+  --soft-grey: rgba(192, 192, 192, 1);
+  --trench-kid100: rgba(171, 208, 198, 1);
+  --trench-kid200: rgba(133, 187, 173, 1);
+  --trench-kid300: rgba(96, 166, 148, 1);
+  --trench-kid400: rgba(58, 145, 122, 1);
+  --trench-kid50: rgba(189, 218, 211, 1);
+  --trench-kid500: rgba(21, 124, 97, 1);
+  --trench-kid600: rgba(18, 104, 81, 1);
+  --trench-kid700: rgba(14, 84, 66, 1);
+  --trench-kid800: rgba(11, 64, 50, 1);
+  --trench-kid900: rgba(8, 45, 35, 1);
+  --white: rgba(255, 255, 255, 1);
+}
