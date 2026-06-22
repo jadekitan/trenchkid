@@ -32,7 +32,7 @@ const Footer = () => {
 
         {/* Social Icons */}
         <div className="flex items-center gap-6">
-          <a 
+          {/* <a 
             href="#" 
             aria-label="Facebook"
             className="text-soft-grey hover:text-trench-kid099 transition-transform duration-300 hover:scale-110"
@@ -45,9 +45,9 @@ const Footer = () => {
             className="text-soft-grey hover:text-trench-kid099 transition-transform duration-300 hover:scale-110"
           >
             <FaTwitter className="text-xl" />
-          </a>
+          </a> */}
           <a 
-            href="#" 
+            href="https://www.instagram.com/trenchkid.project?igsh=MWJlNHlvYnFrdnVtMw%3D%3D&utm_source=qr" 
             aria-label="Instagram"
             className="text-soft-grey hover:text-trench-kid099 transition-transform duration-300 hover:scale-110"
           >

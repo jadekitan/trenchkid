@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaPlay, FaTimes } from "react-icons/fa";
-import NavBar from "../reuseable/NavBar"; // Preserved from your original import
+import NavBar from "../reuseable/NavBar"; 
 
 const Hero = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -10,35 +10,38 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen flex flex-col items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat font-custom">
+      
       {/* NavBar Container */}
       <div className="absolute top-0 w-full z-40 transition duration-1000 ease-in-out">
         <NavBar />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto mt-20">
-        <h1 className="text-white font-custom text-5xl md:text-7xl font-bold leading-tight tracking-tight drop-shadow-lg mb-6">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-5xl mx-auto mt-16 md:mt-20">
+        
+        {/* Scaled Typography for Mobile vs Desktop */}
+        <h1 className="text-white font-custom text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight drop-shadow-lg mb-4 md:mb-6">
           Reshaping futures, <br className="hidden md:block" />
           <span className="text-trench-kid099">one child at a time</span>
         </h1>
 
-        <h4 className="text-soft-grey font-custom text-xl md:text-3xl font-normal leading-relaxed tracking-wide mb-12 max-w-3xl">
+        <h4 className="text-soft-grey font-custom text-lg sm:text-xl md:text-3xl font-normal leading-relaxed tracking-wide mb-8 md:mb-12 max-w-3xl">
           Transforming lives, one smile at a time.{" "}
           <br className="hidden md:block" />
           Join Us in Making a Difference!
         </h4>
 
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-6">
+        {/* Call to Action Buttons - 100% width on mobile, auto on desktop */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full sm:w-auto">
           <button
             onClick={() => setIsVideoOpen(true)}
-            className="group flex items-center gap-4 bg-transparent border border-trench-kid500 text-white px-8 py-4 rounded-lg transition-all duration-300 hover:bg-trench-kid500/20"
+            className="w-full sm:w-auto group flex items-center justify-center gap-4 bg-transparent border border-trench-kid500 text-white px-8 py-4 rounded-lg transition-all duration-300 hover:bg-trench-kid500/20"
           >
             <div className="bg-trench-kid500 text-white p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
               <FaPlay className="ml-1 text-sm" />
             </div>
             <span className="font-custom font-semibold tracking-wide text-lg">
-              Watch the Film
+              Background Story
             </span>
           </button>
 
@@ -46,7 +49,7 @@ const Hero = () => {
             onClick={() => {
               window.location.assign("");
             }}
-            className="flex w-[174px] h-[58px] justify-center items-center bg-trench-kid500 rounded-lg text-white font-custom text-xl font-bold tracking-wide hover:bg-trench-kid700 transition-colors duration-300 shadow-3xl hover:shadow-4xl"
+            className="w-full sm:w-[174px] h-[58px] flex justify-center items-center bg-trench-kid500 rounded-lg text-white font-custom text-xl font-bold tracking-wide hover:bg-trench-kid700 transition-colors duration-300 shadow-3xl hover:shadow-4xl"
           >
             Donate
           </button>
@@ -54,16 +57,17 @@ const Hero = () => {
       </div>
 
       {/* YouTube Video Modal */}
-
       {isVideoOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-dark/95 backdrop-blur-sm transition-opacity duration-300">
-          <div className="relative w-full max-w-5xl px-4 md:px-8">
-            {/* Close Button */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-dark/95 backdrop-blur-sm transition-opacity duration-300 px-2 sm:px-0">
+          <div className="relative w-full max-w-5xl px-2 md:px-8">
+            
+            {/* Close Button - Safely positioned for touch targets */}
             <button
               onClick={() => setIsVideoOpen(false)}
-              className="absolute -top-12 right-4 md:right-8 text-soft-grey hover:text-white transition-colors duration-200"
+              className="absolute -top-12 right-2 md:right-8 text-soft-grey hover:text-white transition-colors duration-200 p-2"
+              aria-label="Close Video"
             >
-              <FaTimes className="text-3xl" />
+              <FaTimes className="text-2xl md:text-3xl drop-shadow-md" />
             </button>
 
             {/* 16:9 Video Container */}

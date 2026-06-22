@@ -40,7 +40,7 @@ const NavBar = () => {
       >
         {/* Brand / Logo */}
         <div className="flex items-center gap-3 cursor-pointer relative z-[60]">
-          <img src={FullLogo} alt="Trench Kid Logo" className="h-15 w-auto" />
+          <img src={FullLogo} alt="Trench Kid Logo" className="h-10 md:h-15 w-auto" />
         </div>
 
         {/* Desktop Navigation Links */}
