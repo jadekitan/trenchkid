@@ -53,7 +53,7 @@ const HowItWorks = () => {
               <div className="absolute inset-0 bg-trench-kid500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
               
               {/* Oversized Typography for Step Number */}
-              <span className="text-7xl font-bold text-trench-kid099/20 mb-6 group-hover:text-trench-kid099 group-hover:scale-110 transition-all duration-500 z-10">
+              <span className="text-7xl font-bold text-trench-kid50 mb-6 group-hover:text-trench-kid099 group-hover:scale-110 transition-all duration-500 z-10">
                 {step.count}
               </span>
               

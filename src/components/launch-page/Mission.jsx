@@ -26,7 +26,7 @@ const Mission = () => {
 
         {/* Text Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-start text-left z-10">
-          <div className="flex flex-col items-center md:items-start gap-2 mb-6">
+          <div className="flex flex-col items-start gap-2 mb-6">
             <h2 className="text-trench-kid500 font-bold text-sm tracking-widest uppercase">
               Our Mission
             </h2>
