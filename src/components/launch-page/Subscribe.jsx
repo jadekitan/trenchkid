@@ -69,7 +69,7 @@ const Subscribe = () => {
           <div className="w-full lg:w-2/3 flex flex-col items-start gap-10">
             <div className="flex flex-col gap-4">
               <h4 className="text-3xl md:text-4xl font-bold text-white tracking-wide">
-                Be Part of Reshape Futures
+                Be Part of Reshaped Futures
               </h4>
               <p className="text-soft-grey text-lg leading-relaxed max-w-2xl">
                 Your involvement is key to sustaining and expanding our impact. Join us in creating more success stories and be part of the change.
