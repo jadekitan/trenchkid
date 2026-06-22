@@ -32,14 +32,15 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 w-full flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-300 font-custom z-50 ${
-          isScrolled
+        // INCREASED Z-INDEX TO z-[60] SO IT STAYS ABOVE THE OVERLAY
+        className={`fixed top-0 w-full flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-300 font-custom z-[60] ${
+          isScrolled && !isMobileMenuOpen
             ? "bg-dark/80 backdrop-blur-md shadow-3xl"
             : "bg-transparent"
         }`}
       >
         {/* Brand / Logo */}
-        <div className="flex items-center gap-3 cursor-pointer relative z-[60]">
+        <div className="flex items-center gap-3 cursor-pointer">
           <img src={FullLogo} alt="Trench Kid Logo" className="h-12 md:h-17 w-auto" />
         </div>
 
@@ -66,15 +67,13 @@ const NavBar = () => {
         </div>
 
         {/* Desktop CTA & Mobile Toggle */}
-        <div className="flex items-center gap-6 relative z-[60]">
-          <button
-            onClick={() => {
-              window.location.assign("");
-            }}
+        <div className="flex items-center gap-6">
+          <a
+            href="mailto:trenchkidproject@gmail.com?subject=Donation Inquiry - The Trench Kid Project"
             className="hidden md:flex bg-trench-kid500 hover:bg-trench-kid700 text-white px-6 py-2.5 rounded-lg font-bold tracking-wide transition-all duration-300 shadow-3xl"
           >
             Donate
-          </button>
+          </a>
 
           {/* Mobile Menu Icon */}
           <button
@@ -92,7 +91,8 @@ const NavBar = () => {
 
       {/* Mobile Full-Screen Overlay */}
       <div
-        className={`fixed inset-0 z-[55] bg-dark flex flex-col items-center justify-center transition-all duration-500 ease-in-out font-custom ${
+        // REDUCED Z-INDEX TO z-[50] SO IT STAYS BEHIND THE NAVBAR
+        className={`fixed inset-0 z-[50] bg-dark flex flex-col items-center justify-center transition-all duration-500 ease-in-out font-custom ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
@@ -119,15 +119,14 @@ const NavBar = () => {
             Community
           </a>
 
-          <button
-            onClick={() => {
-              setIsMobileMenuOpen(false);
-              window.location.assign("");
-            }}
+          {/* RESTORED MOBILE DONATE LINK */}
+          <a
+            href="mailto:trenchkidproject@gmail.com?subject=Donation Inquiry - The Trench Kid Project"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="mt-6 bg-trench-kid500 hover:bg-trench-kid700 text-white px-12 py-4 rounded-lg transition-all duration-300 shadow-3xl w-full text-center"
           >
             Donate
-          </button>
+          </a>
         </div>
       </div>
     </>
