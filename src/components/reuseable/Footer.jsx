@@ -1,117 +1,60 @@
 import React from "react";
-import FullLogo from "/src/assets/full-logo.svg";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { VscSend } from "react-icons/vsc";
-import Illustration from "/src/assets/illustrations/footer.svg";
-
-const QuickLinks = ["Home", "Discover", "About Us", "Contact Us"];
-const Legal = ["Privacy Policy", "Terms of Services"];
-const footerDate = new Date().getFullYear();
-const copyRight = () => {
-  return "© " + footerDate + " The Trench Kid |";
-};
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"; // Leveraging the icons from your original build
 
 const Footer = () => {
+  // Automatically pull the current year so it never goes out of date
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className=" w-full h-96 flex flex-col items-start gap-10">
-      <img src={Illustration} alt="" className=" absolute left-0" />
-      <div className=" inline-flex items-start gap-[60px]">
-        <div className=" flex flex-col items-start gap-[31px]">
-          <a href="" className=" flex items-center gap-2">
-            <img src={FullLogo} alt="" className="w-[49px] h-[72.625px]" />
-            <h6 className=" text-trench-kid500 text-center font-custom text-lg font-bold">
-              The Trench Kid{" "}
-              <span className=" text-trench-kid099">Project</span>
-            </h6>
+    <footer className="w-full bg-dark py-10 border-t border-white/10 font-custom relative z-10">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        
+        {/* Copyright & Brand */}
+        <div className="text-soft-grey text-sm text-center md:text-left tracking-wide">
+          &copy; {currentYear} The Trench Kid Project. All rights reserved.
+        </div>
+
+        {/* Quick Links */}
+        <div className="flex items-center gap-8 text-sm tracking-widest uppercase font-semibold">
+          <a 
+            href="#" 
+            className="text-soft-grey hover:text-white transition-colors duration-300"
+          >
+            Privacy Policy
           </a>
-          <div className=" flex items-start gap-[15px]">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <FaFacebookF className=" hover:text-trench-kid500" />
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className=" hover:text-trench-kid500" />
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className=" hover:text-trench-kid500" />
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className=" hover:text-trench-kid500" />
-            </a>
-          </div>
+          <a 
+            href="#" 
+            className="text-soft-grey hover:text-white transition-colors duration-300"
+          >
+            Terms of Service
+          </a>
         </div>
-        <div className=" flex flex-col items-start gap-[10px]">
-          <h5 className=" text-dark font-custom text-base font-bold leading-9 ">
-            Contact Us:
-          </h5>
-          <h4 className=" text-dark font-custom text-[14px] font-normal leading-9">
-            Phone: <a href="tel:+2348034270313">+234 803 427 0313</a>
-          </h4>
+
+        {/* Social Icons */}
+        <div className="flex items-center gap-6">
+          <a 
+            href="#" 
+            aria-label="Facebook"
+            className="text-soft-grey hover:text-trench-kid099 transition-transform duration-300 hover:scale-110"
+          >
+            <FaFacebookF className="text-xl" />
+          </a>
+          <a 
+            href="#" 
+            aria-label="Twitter"
+            className="text-soft-grey hover:text-trench-kid099 transition-transform duration-300 hover:scale-110"
+          >
+            <FaTwitter className="text-xl" />
+          </a>
+          <a 
+            href="#" 
+            aria-label="Instagram"
+            className="text-soft-grey hover:text-trench-kid099 transition-transform duration-300 hover:scale-110"
+          >
+            <FaInstagram className="text-xl" />
+          </a>
         </div>
-        <div className=" flex flex-col items-start gap-[10px]">
-          <h5 className=" text-dark font-custom text-base font-bold leading-9 ">
-            Quick Links:
-          </h5>
-          {QuickLinks.map((link, i) => {
-            return (
-              <a
-                key={i}
-                href=""
-                className=" text-dark font-custom text-[14px] font-normal leading-9 hover:text-trench-kid099"
-              >
-                {link}
-                {""}
-              </a>
-            );
-          })}
-        </div>
-        <div className=" flex flex-col items-start gap-[10px]">
-          <h5 className=" text-dark font-custom text-base font-bold leading-9 ">
-            Legal
-          </h5>
-          {Legal.map((link, i) => {
-            return (
-              <a
-                key={i}
-                href=""
-                className=" text-dark font-custom text-[14px] font-normal leading-9 hover:text-trench-kid099"
-              >
-                {link}
-                {""}
-              </a>
-            );
-          })}
-        </div>
-        <div className=" flex flex-col items-start gap-[10px]">
-          <h5 className=" text-dark font-custom text-base font-bold leading-9 ">
-            About Us
-          </h5>
-          <h4 className=" w-[186px] text-dark font-custom text-[14px] font-normal leading-9">
-            You can contact Us to send email to us
-          </h4>
-          <form action="" className=" relative">
-            <input
-              type="email"
-              className=" flex py-[7px] pl-3 pr-6 justify-end gap-[166px] rounded-[25px] bg-[#F5F5F5] font-custom placeholder:text-[12px] placeholder:font-normal"
-              placeholder="Your email"
-              required
-            />
-            <button
-              type="submit"
-              className=" absolute right-2 top-1 w-8 h-8 rounded-[25px] bg-trench-kid500 flex justify-center items-center"
-            >
-              <VscSend className=" text-white" />
-            </button>
-          </form>
-        </div>
-      </div>
-      <div className=" w-full inline-flex flex-col items-center gap-[17px]">
-        <img src="./src/assets/icons/footer-divider.svg" alt="" className="" />
-        <p className=" text-[#0E0F1D] font-custom text-base font-normal">
-          {copyRight()}
-        </p>
+
       </div>
     </footer>
   );
