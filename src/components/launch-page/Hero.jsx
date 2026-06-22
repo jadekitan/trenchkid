@@ -26,9 +26,12 @@ const Hero = () => {
         </h1>
 
         <h4 className="text-soft-grey font-custom text-md sm:text-lg md:text-xl font-normal leading-relaxed tracking-wide mb-8 md:mb-12 max-w-3xl">
-          Breaking Cycles. Building Futures. Supporting vulnerable children
-          through education, mentorship, and care.{" "}
+          <span className="text-trench-kid50 font-bold">
+            Breaking Cycles. Building Futures.{" "}
+          </span>
           <br className="hidden md:block" />
+          Supporting vulnerable children through education, mentorship, and
+          care. <br className="hidden md:block" />
           Join Us in Making a Difference!
         </h4>
 
