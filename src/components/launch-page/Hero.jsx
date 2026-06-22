@@ -29,9 +29,11 @@ const Hero = () => {
           <span className="text-trench-kid50 font-bold">
             Breaking Cycles. Building Futures.{" "}
           </span>
+
           <br className=" block" />
           Supporting vulnerable children through education, mentorship, and
           care. <br className=" block" />
+
           Join Us in Making a Difference!
         </h4>
 
