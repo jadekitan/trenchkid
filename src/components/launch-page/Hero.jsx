@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-5xl mx-auto">
         {/* Scaled Typography for Mobile vs Desktop */}
         <h1 className="text-white font-custom text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight drop-shadow-lg mb-4 md:mb-6">
-          Reshaping futures, <br className="hidden md:block" />
+          Reshaping futures, <br className="block" />
           <span className="text-trench-kid099">one child at a time</span>
         </h1>
 

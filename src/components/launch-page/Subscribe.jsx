@@ -88,7 +88,7 @@ const Subscribe = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  className="w-full h-[60px] px-6 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-soft-grey/50 font-medium focus:outline-none focus:border-trench-kid500 transition-colors duration-300"
+                  className="w-full h-[60px] px-6 rounded-lg bg-white/5 border border-white/10 text-dark placeholder:text-soft-grey/50 font-medium focus:outline-none focus:border-trench-kid500 transition-colors duration-300"
                   placeholder="Fullname"
                   required
                 />
@@ -97,7 +97,7 @@ const Subscribe = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full h-[60px] px-6 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-soft-grey/50 font-medium focus:outline-none focus:border-trench-kid500 transition-colors duration-300"
+                  className="w-full h-[60px] px-6 rounded-lg bg-white/5 border border-white/10 text-dark placeholder:text-soft-grey/50 font-medium focus:outline-none focus:border-trench-kid500 transition-colors duration-300"
                   placeholder="Email"
                   required
                 />
