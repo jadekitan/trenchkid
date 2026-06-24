@@ -6,7 +6,7 @@ const Hero = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   // Replace this ID with your actual YouTube video ID
-  const youtubeVideoId = "dQw4w9WgXcQ";
+  const youtubeVideoId = "iaDNcNp8zXs";
 
   return (
     // NOTE: If the image's focal point is at the top, change "bg-center" to "bg-top" or "bg-[50%_20%]" here
